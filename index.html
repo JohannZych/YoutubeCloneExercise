@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/280338dba2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <img src="assets/image/youtube.png" alt="logoYoutube">
+    <div class="search">
+        <form action="">
+            <label for="search"></label>
+            <input type="search" name="search" id="search" placeholder="Rechercher">
+            <i class="fa-solid fa-magnifying-glass" ></i>
+        </form>
+    </div>
+    <img src="assets/image/youtube.png" alt="logoYoutube">
+</header>
+<div id="maskPanel">
+    <a href="#" onclick="displayPanel()"><i class="fa-solid fa-arrow-left" style="color: gray; font-size: 1.5em"></i></a>
+</div>
+<div id="unmaskPanel">
+    <a href="#" onclick="displayPanel()"><i class="fa-solid fa-arrow-right" style="color: gray; font-size: 1.5em"></i></a>
+</div>
+
+<section class="nav-container" id="nav-panel">
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house" style="color: gray"></i>Accueil</a></li>
+        <li><a href="#"><i class="fa-solid fa-camera" style="color: gray"></i>Shorts</a></li>
+        <li><a href="#"><i class="fa-solid fa-bookmark" style="color: gray"></i>Abonnements</a></li>
+        <li><a href="#"><i class="fa-solid fa-folder" style="color: gray"></i>Bibliothèque</a></li>
+        <li><a href="#"><i class="fa-solid fa-history" style="color: gray"></i>Historique</a></li>
+        <li><a href="#"><i class="fa-solid fa-camera" style="color: gray"></i>Vos Vidéos</a></li>
+        <li><a href="#"><i class="fa-solid fa-clock" style="color: gray"></i>A regarder plus tard</a></li>
+        <li><a href="#"><i class="fa-solid fa-thumbs-up" style="color: gray"></i>Vidéos "J'aime"</a></li>
+    </ul>
+</section>
+<section class="subscribe-container" id="sub-panel">
+    <ul>
+        <li><i class="fa-solid fa-bookmark" style="color: gray"></i>Abonnements</li>
+        <li><a href="#"><img src="assets/image/php.jpg" alt="logo-sub">Wild Code School</a></li>
+        <li><a href="#"><img src="assets/image/php.jpg" alt="logo-sub">Grafikart</a></li>
+        <li><a href="#"><img src="assets/image/php.jpg" alt="logo-sub">Lior Chamla</a></li>
+        <li><a href="#"><img src="assets/image/php.jpg" alt="logo-sub">Cocadmin</a></li>
+    </ul>
+</section>
+<section class="tag-container">
+    <input type="button" value="Tous" class="active" id="tous" onclick="getValue();">
+    <input type="button" value="Back" id="back" onclick="getValue();">
+    <input type="button" value="Front" id="front" onclick="getValue();">
+    <input type="button" value="Fullstack" id="fullstack" onclick="getValue();">
+    <input type="button" value="Backend" id="backend" onclick="getValue();">
+    <input type="button" value="Frontend" id="frontend" onclick="getValue();">
+    <input type="button" value="Java" id="java" onclick="getValue();">
+    <input type="button" value="Angular" id="angular" onclick="getValue();">
+    <input type="button" value="Spring" id="spring" onclick="getValue();">
+    <input type="button" value="Springboot" id="springboot" onclick="getValue();">
+</section>
+<section class="video-container">
+
+</section>
+</body>
+<script src="data/videosList.js"></script>
+<script src="script.js"></script>
+</html>

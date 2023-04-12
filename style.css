@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+:root {
+    --marginVideoContainer: 200px;
+    --gray: #3F3F3F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    margin: 2em 2em;
+    justify-content: space-between;
+}
+
+header img {
+    width: 5vw;
+}
+
+#maskPanel {
+    position: absolute;
+    left: 180px;
+    top: 70px;
+}
+
+#unmaskPanel {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+}
+
+.search input {
+    font-size: 1.3em;
+    padding: 5px 0 5px 10px;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid var(--gray);
+    width: 20vw;
+}
+
+.search i {
+    padding: 10px 10px 8px 10px;
+    border: 1px solid var(--gray);
+    border-radius: 0 15px 15px 0;
+}
+
+.tag-container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tag-container input {
+    padding: 0.5em 1em;
+    margin: 0 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: all .2s ease-in-out;
+    background-color: var(--gray);
+}
+.tag-container .active{
+    background-color: white;
+    color: var(--gray);
+}
+.tag-container input:hover {
+    transform: scale(1.2);
+}
+
+.video-container {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin-left: var(--marginVideoContainer);
+}
+
+.card {
+    width: 20vw;
+    height: 35vh;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card:hover {
+    transform: scale(0.9);
+}
+
+.card img {
+    width: 20vw;
+    border-radius: 8px;
+}
+
+.nav-container {
+    position: absolute;
+    left: 0.5em;
+    top: 10vh;
+    font-weight: bold;
+    width: 200px;
+}
+
+.nav-container li {
+    margin-top: 20px;
+}
+
+.nav-container li:nth-child(3) {
+    padding-bottom: 1em;
+    border-bottom: 1px solid var(--gray);
+}
+
+.nav-container a {
+    text-decoration: none;
+}
+
+.nav-container i {
+    margin: 0 10px;
+}
+
+.subscribe-container {
+    position: absolute;
+    left: 0.5em;
+    top: 47vh;
+    font-weight: bold;
+    width: 200px;
+    border-top: 1px solid var(--gray);
+}
+
+.subscribe-container li {
+    margin-top: 20px;
+    height: 2em;
+
+}
+
+.subscribe-container a {
+    text-decoration: none;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-container img {
+    width: 2em;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.subscribe-container i {
+    margin: 0 10px;
+}
