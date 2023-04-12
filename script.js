@@ -5,13 +5,15 @@ function displayVideos(arrayVideos) {
     elements.forEach(element => {
         element.remove();
     });
+    let html = "";
     for (let i = 0; i < arrayVideos.length; i++) {
-        section.insertAdjacentHTML('afterbegin', '<div class="card"> <h2>' +
+        html += '<div class="card"> <h2>' +
             '<img src="' + arrayVideos[i].image + '" alt="vignette">' +
             arrayVideos[i].title + ' </h2>' +
             arrayVideos[i].content.substring(0, 120) + "..." +
-            '</div>');
+            '</div>';
     }
+    section.innerHTML = html + section.innerHTML;
 }
 
 displayVideos(videosList)
@@ -54,17 +56,14 @@ function filterByTag(value) {
 let root = document.documentElement;
 
 function displayPanel() {
-    if (document.getElementById("nav-panel").style.display === 'block') {
-        document.getElementById("nav-panel").style.display = 'none';
-        document.getElementById("sub-panel").style.display = 'none';
-        document.getElementById("maskPanel").style.display = 'none';
-        document.getElementById("unmaskPanel").style.display = 'block';
-        root.style.setProperty('--marginVideoContainer', '0');
-    } else {
-        document.getElementById("nav-panel").style.display = 'block';
-        document.getElementById("sub-panel").style.display = 'block';
-        document.getElementById("maskPanel").style.display = 'block';
-        document.getElementById("unmaskPanel").style.display = 'none';
-        root.style.setProperty('--marginVideoContainer', '200px');
-    }
+    const navPanel = document.getElementById("nav-panel");
+    const subPanel = document.getElementById("sub-panel");
+    const maskPanel = document.getElementById("maskPanel");
+    const unmaskPanel = document.getElementById("unmaskPanel");
+
+    root.style.setProperty("--marginVideoContainer", navPanel.style.display === "block" ? "0" : "200px");
+    navPanel.style.display = navPanel.style.display === "block" ? "none" : "block";
+    subPanel.style.display = navPanel.style.display;
+    maskPanel.style.display = navPanel.style.display;
+    unmaskPanel.style.display = navPanel.style.display === "block" ? "none" : "block";
 }
