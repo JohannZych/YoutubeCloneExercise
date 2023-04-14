@@ -7,11 +7,12 @@ function displayVideos(arrayVideos) {
     });
     let html = "";
     for (let i = 0; i < arrayVideos.length; i++) {
-        html += '<div class="card"> <h2>' +
-            '<img src="' + arrayVideos[i].image + '" alt="vignette">' +
-            arrayVideos[i].title + ' </h2>' +
+        html += '<a href="#" class="card"> <h3>' +
+            '<video class="videoHover" muted loop onmouseover="this.play()" ' +
+            'onmouseout="this.pause()"><source src="' + arrayVideos[i].image + '"></video>' +
+            arrayVideos[i].title + ' </h3>' +
             arrayVideos[i].content.substring(0, 120) + "..." +
-            '</div>';
+            '</a>';
     }
     section.innerHTML = html + section.innerHTML;
 }
